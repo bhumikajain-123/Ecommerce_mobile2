@@ -58,9 +58,9 @@ Route::get('/login', function() {
 
 // register-------------
 
-Route::get('/register', function() {
-    return view('register');
-})->name('register');
+Route::get('/signup', function() {
+    return view('signup');
+})->name('signup');
 
 
 // nav product----------------------
