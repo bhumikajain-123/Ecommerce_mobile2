@@ -7,6 +7,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SubcategoryController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\VendorController;
 
 
 Route::get('/', function () {
@@ -56,11 +57,6 @@ Route::get('/login', function() {
 })->name('login');
 
 
-// signup-------------
-
-Route::get('/signup', function() {
-    return view('signup');
-})->name('signup');
 
 
 // nav product----------------------
@@ -83,6 +79,15 @@ Route::get('/contact', function() {
 Route::get('/nav_product', function() {
     return view('nav_product');
 })->name('nav_product');
+
+
+// vendor dashboard route start here--------
+
+
+Route::get('vendor/signup',[VendorController::class,'signup'])->name('signup');
+Route::get('vendor/signup',[VendorController::class,'register']);
+
+
 
 
 
