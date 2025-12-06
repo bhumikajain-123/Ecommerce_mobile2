@@ -33,7 +33,7 @@
 
                     <!-- Register link -->
                     <p class="text-center mt-3">
-                        Don't have an account? <a href="{{ url('register') }}">Register Here</a>
+                        Don't have an account? <a href="{{ url('signup') }}">Sign-up</a>
                     </p>
                 </form>
             </div>

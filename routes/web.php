@@ -56,7 +56,7 @@ Route::get('/login', function() {
 })->name('login');
 
 
-// register-------------
+// signup-------------
 
 Route::get('/signup', function() {
     return view('signup');

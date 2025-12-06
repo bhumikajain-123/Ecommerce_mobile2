@@ -15,12 +15,27 @@
                         <label for="name" class="form-label">Full Name</label>
                         <input type="text" class="form-control" id="name" placeholder="Enter your full name">
                     </div>
+                    <!-- Phone & Email Row -->
+                    <div class="row mb-3">
 
-                    <!-- Email -->
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        <!-- Phone Number -->
+                        <div class="col-12 col-md-12 col-lg-6">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <div class="input-group">
+                                <span class="input-group-text">+91</span>
+                                <input type="number" class="form-control" id="phone" placeholder="Enter phone number">
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="col-12 col-md-12 col-lg-6 mt-sm-3 mt-lg-0">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+
                     </div>
+
+
 
                     <!-- Password -->
                     <div class="mb-3">
@@ -28,10 +43,9 @@
                         <input type="password" class="form-control" id="password" placeholder="Enter your password">
                     </div>
 
-                    <!-- Confirm Password -->
+                    <!-- address -->
                     <div class="mb-3">
-                        <label for="confirm_password" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="confirm_password" placeholder="Confirm your password">
+                        <textarea type="address" class="form-control" id="address" placeholder="Address"></textarea>
                     </div>
 
                     <!-- Submit Button -->
