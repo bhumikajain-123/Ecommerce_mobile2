@@ -58,6 +58,7 @@ class VendorController extends Controller
 
                 session(['vendorLogin' => true]);
                 session(['name' => $vendor->full_name]);
+                session(['vendorId' => $vendor->id]); //
 
                 return redirect('vendor/dashboard');
             }

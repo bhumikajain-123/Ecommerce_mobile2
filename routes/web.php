@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\VendorController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\vendor\ProductController;
 
 // use App\Http\Controllers\HomeController;
 // use App\Http\Controllers\CategoryController;
@@ -102,6 +103,31 @@ Route::post('admin/update_category/{id}', [CategoryController::class, 'update_ca
 
 
 Route::delete('admin/delete_category/{id}', [CategoryController::class, 'delete_category'])->name('admin.delete_category');
+
+
+
+//vendor----  product------
+
+Route::get('vendor/add_product', [ProductController::class,'add_product'])->name('vendor/add_product');
+
+// to insert data in database-
+Route::post('vendor/add_product', [ProductController::class,'store_product'])->name('vendor/add_product');
+
+Route::get('vendor/view_product', [ProductController::class,'view_product'])->name('vendor.view_product');
+
+// for view all record from database
+
+Route::get('vendor/edit_product/{id}', [ProductController::class,'edit_product'])->name('vendor.edit.product');
+Route::post('vendor/update_product/{id}', [ProductController::class,'update_product'])->name('vendor.product.update');
+
+// keep as POST
+
+Route::get('vendor/delete_product/{id}', [ProductController::class,'delete_product'])
+    ->name('vendor.product.delete');
+
+
+
+
 
 
 
