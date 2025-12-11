@@ -56,11 +56,12 @@ Route::get('/cart/remove/{id}', [CartController::class, 'remove'])->name('cart.r
 // ---------------- Checkout -------------------
 
 // Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout');
+
 use App\Http\Controllers\CheckoutController;
 
-Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout.page');
-Route::post('/checkout', [CheckoutController::class, 'placeOrder'])->name('checkout.placeorder');
-Route::get('/order-success', [CheckoutController::class, 'success'])->name('order.success');
+Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
+Route::post('/checkout', [CheckoutController::class, 'placeOrder']);
+Route::get('/payment-success', [CheckoutController::class, 'paymentSuccess'])->name('payment.success');
 
 // ---------------- Order success -------------------
 

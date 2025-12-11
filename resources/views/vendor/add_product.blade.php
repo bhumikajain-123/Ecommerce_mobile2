@@ -71,13 +71,9 @@ Swal.fire({
 
                                 <div class="mb-3">
                                     <label>Category</label>
-                                    <select class="form-control form-control-sm"
+                                    <input type="text" class="form-control form-control-sm"
                                         name="vp_category">
-                                        <option>Select Category</option>
-                                        <option>Electronics</option>
-                                        <option>Fashion</option>
-                                        <option>Mobiles</option>
-                                    </select>
+                                        
                                     @error('vp_category')        <span class="text-danger">{{ $message }}</span> @enderror
                                 </div>
 

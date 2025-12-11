@@ -78,8 +78,15 @@
                 </tr>
             </tbody>
         </table>
+<div class="row mt-3">
+    <div class="col-lg-6 d-flex justify-content-start">
+        <a href="{{ url('/home') }}" class="btn btn-success">Add More</a>
+    </div>
+    <div class="col-lg-6 d-flex justify-content-end">
+        <a href="{{ url('/checkout') }}" class="btn btn-success">Checkout</a>
+    </div>
+</div>
 
-        <a href="{{ url('/checkout') }}" class="btn btn-success mt-3">Checkout</a>
     @endif
 </div>
 
