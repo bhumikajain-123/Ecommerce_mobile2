@@ -10,8 +10,29 @@
         $grandTotal = 0;
     @endphp
 
+     {{-- If Cart is Empty --}}
     @if(empty($cart))
-        <p>Your cart is empty!</p>
+
+        <div class="alert alert-warning text-center mt-4">
+            <h4>Your cart is empty!</h4>
+            <p>Redirecting to Home in <span id="counter">3</span> seconds...</p>
+        </div>
+
+        {{-- Auto Redirect After 3 Seconds --}}
+        <script>
+            setTimeout(() => {
+                window.location.href = "{{ url('home') }}";
+            }, 3000);
+
+            // Countdown Timer
+            let count = 3;
+            let timer = setInterval(() => {
+                count--;
+                document.getElementById('counter').innerText = count;
+                if (count <= 0) clearInterval(timer);
+            }, 1000);
+        </script>
+
     @else
         <table class="table table-bordered">
             <thead class="table-light">
